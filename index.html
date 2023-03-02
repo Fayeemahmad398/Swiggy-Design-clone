@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Swiggy-Clone</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="fixed-navbar">
+
+        <div class="left-navbar">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA2FBMVEX/////fgAAAADAwMCOjo7/dQD/fAD/dwD/egD/dAD/cQD/+/X/y6X/8eP/38n/kED/fRz/9On/hij/lzr/xJ//gQD/jSj/bAD/mUr/2b//5db/1bT/m0//iS//7Nz/+/b/wJL/q23/gRX/sXj/6dT/t4P/qGj/o17/zLJWVlZ6enpNTU3U1NQtLS1xcXHn5+dlZWWysrL/2LL/vo3/oFj/soP/z6z/rn4aGhr/xqT/omf/tYr/p13/yJv/jjf/0ar/37v/sW3/oVf/z7b/sof/pW//jDujo6Nrv/UIAAAN3UlEQVR4nO2de3ubuBKHTTa6YRsvbhLb8QXfk+626W6SOtt24/Z0tz3f/xsdQAIECAxhhO0c//7o86TGWC8S0kiaGTXOXrsa+y6Adv0fEb797fw16e73BOHbd43XpnfvZcLzfRdHi95GhHf7LosmvQ8I//qw76Jo0ruA8I99l0SbfheEf+67INp0Jwh/2XdBtOn8RHj0OhEev06Ex68T4fHrRHj8qp/QsT3V9nN1EtrLf6brN+Pu3FN3PFp8Gkwc/T9bE6Ez2ay7FCFKsRClBBG8XVm6q7MWwslDn7o4RkrYxezebLRC6id0rkcM0TRdSEmY8bGp7ee1Ew4/X5o5eCHk1ZeJphLoJRzOTaponCpIZN7oYdRK+J0Vw+OiaKqjEBoJrQ4qwefVI1to6HO0ETpTuvP9SwmNB9Dl0EbYHpVqoYEonQIXRBehNScv4DO8lvodeOTQQ/i3+ZIK5CLoE2hZtBAuzBfzedVoWpCF0UE4qwTo2XKQ/Y0GwlnJQSItigER4QlXlQFdRAOuoYITTtHLOxkJcQ5mwkETDl80DCoQt1CDBjDhsgfC5yFioPk/MGG/vKWWJfMZpkiwhFMGBmhgA8YMByVcFpwMFhNaQ5QJlNAZvdAYzRADGRUhCTeAbdQTTH8KSNieQ7ZRT2hVvVSQhJ1SbZQyc/f1JkA7hSMclLLW6NVmuNiJSPuHRNgpMxRi5I3nu01YUr0SwQitklXofWey86HQx8MhXJd7C99432kau/omTCpb4GCE5UaKooRG9TVUKMKSJndhQmwcCuFFuXlvYUKjV7WZQhF+LjepKE7Ivh4GoYPL2TPFCcnFYRBaJZfXihPSz4dBWHZiWJwQX1ac6wMRrkvO7YsTGqxiVwND2ByXnFaUIDQ3h0DYLrtGWoKQPh0CYdmOphTh6BAIW2Vn9yUIcbfaTB+G8EFjKyWdap0pDOHuueyLCcl8WaloQIQzLYSexxS5alcD3DOhyhPMR6PINNnlm6fbihUIRnhTdjGfEzY2LojJkOfRR91/EfP+ZOhq9DQdVmfj2msdurKGrefVajH7MVutVtPnr8PBEtinZt+E+gVDWHrf9+gIn1894aCs1YavgMq/WzCEk7JWG6ZVh7nCApo9dctuyuCemSGG8JvZxXAJ5eQOQ+iM4Ha3hZc7unyAcccAmuOXNkwLkBI8g2AEIiw9fSrEiOYV5/eAhMuKrmyZjNURoVaEQX0UJERceaMbivAHXFcTE3o4FMKS+xaFRTuHQniv50UEMH6gCCdgDm2HStjQRFjdVwGM8EpPZ1p1PRiQcAVv1XiqPiCCEdoZq0pVCQ/HU6EBaHxHotXnkXCEGx0jIq3ugQlHaIM77rlCwwMibNxomEHh6vMnQMJyrnuFVN1mAyVsjsH7GggHU1AfYehKxHOA9W9QP++fwH0NgfBlB/XVhwxG8MSq96TAhHZJz6gdwl2ITRrYiJIF6JtIFhBlgiUs7XWSKwYSogcc9wS5XEMruigIHWzsmmGY1yBFgo4/vAKrxKqeQoGgCS2QEFJP6CCj8xqA3WkPyFUBnNApFVmSLUyACgQfyz2ZgyASiKguTxri8SdXPRMhwoUytOspYALldKIla4R937oQamVo13QZYHIvtLece/m7ABBBa0J7I8x32iMHnFOhqHKnIVCjvafDJASswsMkJDeAP6Sb0F5+u2+JnrX19f5b6CiUQ4gpZOY2jYTNwQj3etx/lI+NzDR7vTUf6HIIDz/HENeDgZTuC4QvoF1mEuJL0HJoI9xkJsMy/cE8e7+RfAQtiDbC7BVwlk+IEaxTnzZCO9OZbwchmMktpO89zJwo5hPS+VFkpPM0yeotcwkxgs6cqHG0GGYY17mEDMBXLy6dI37GbD+PkFTPoZCUTsIM7+8cQoxhVhBlabXa1KM6Tx2kJGRT+EJoJfyonMgj3yhTEdKthgzmWgnbSrsmm9CEinWSpXdu8azaUOQuo4pPIHbt09I8e1IGl6LRYKDoZzHVkptdM2FTOWJQ5WoigE+3SrpnwFZhB3DQib0k7asYRcPaaFdTnJB2wua22CI/3BJwQvpXooplI2Age/Yq1bDWNi2AiPraTiupYzVxdzsFXMRPqQ7CrGmU1EY1nlJSy4rw446NJqppoPBVC2E7f9MUIO1cjupZ1c/3WkQtnb9d077FLMenDyibbpbqOu+pn1mLaKT3WKu69p6crDzYmmuwxt21idoEp9tXcWaXr41qVMRUx7Q+php3SFXrUiBewPmqkVAR7w0Q9LNTde5yb5P9Ke7BH36UUq37+J/jiBjwnI5s1UrYjKX8xgCJnguoXl+MpewnxKpmJi2mmr1NpNT7SNusPq66/WnCg4SIZmMtVN2EQfgXBYkWKaLafaLa3Ju/V9t5ufV7fXnBURh+qzdTe/BrWyMD1dON+toDYbNjAjuU5GofvonXNY0TXHvzvqxNJ8Lj14nw+HUiPH6dCI9fJ8Lj14nw+LWL0Jm0VrPFhSUtqjgDy5f0X5tV5O7j8E/DpVArdXUg2/Lu/dCysuf7zeuNe8nqYhBzJxokfkL6mfStdhBaHcIQIYxto31ap+fHufai/7GNXjSlHfof92ZBGcfMvzzl8TRYz5mJvFghhm/UjMtFF4lLyEzawumbvATS5vjA/1WmOJQmn9Ayg10/ao7CKAGeRV/yEJkyug3/ePQ/DXNaNDveEin+NUFob80owRsmqmRC9iOTcsARcx0+hgnfxpKDa/j2pOo2uYSxA5pRN3g+wn/bDP72snyZAT8/8S/KaaEmHHQTG6Zsm1zhX+KEBwcywo0qnrZYOpOt5S9S0itFrEYeoRU/gZqGEfJvOEXgI/KdSDXKTwmMjtdUEj6aqR1h2osvTq16qc043AsWB2z+jMMqE8f0Kjcj8wjFkYaYUvEDwWMWrhW0KW7vM/G780M58DzsWFSEkb+ie28Bgm5ifVG0FRddQrbhTUSCv8BNhUeGo1lDoRxCcYgTHc/886rIPOxNRC4hxvsafpqVyOk09Asv5c5REA6C14uQ8WO/S4kPGGtgk2CDg6LtaLSl3jdIJ7qHqDTCmbgTa0ZgZg4hD+vBnt/nA8PoUfq+6Gv88I+2KC9/nvzhSjGSacLAHxOTtde529Ya4QRgkN0Ok9HA/cC+XhBM+nKHK86b4AHDo8xuJp9wKWHMcewtEaF3PlSQ1pM/T/8FkWMk04SijeOo49j0Eu1rGQBOg/+xzBhgcPgw8YK+bZ5PJcM5bncdGt4Ldh3/tsij7x+hGTgg+BkAeQYe8iWPkPdTsTOpkyvgoobkAJPnRPkf+IvqBYLxNwNnePrnEIoIQkq/fEt9xn3w8daRQn+8SuS9tuzvmyJc8ipkOWmsRZLJ3HRtDm/rdOwI786s89ny+lLR5bnj8fwi8QQFvdvXSIfouGAd/t9St5gi/MQfTjen9PwlwDh390YctYseuBtL5rm6eYRRBCFG82m8K+BjLn20pWGZjmy/6cQiQ1KEX/xviN7WsWUFl/Dk4CKxgvqSRtBO8Xzr/wDKcszJtWkuoh1bjDpxQ5ffvvsfbl3wV/ZX/lds3yVF+ERF7Xsa0m6k7/HHJx7CP3PpEtk7RZyHhXe06Hy7dCW5wFAqN3RnK90ej1dI+suQR/cMQh7Q3bg3cajI0OWEIuH8LYsuiQeytyIvq5xEpzvmFo+S4YaZ2i7xRiJHbqyxNyKLkD+ue/kRJgn5+HYr/VAiVD/KepvjFLBrfvhMzdDlLna+sny0jGtMPMU6nDzCf4l0LzUhj+oTOYRzCFvBR9jI7pR2z/E3Py6FnYypbDpGuZ+9jj/yVk+cV5givODFH+UQ3iLpRjmEdtDCWE7ms0KrGJMr3ghN+fThMPKOz5TCmmZxn+YU4YB/j88+7vmBOokJp/DU5AP+rXRJMqGEOJGBKE3uQoSTv0UxeTykbKtECQS5f+EUqRtMilB0gXTr1ZB97WnSxzFCESON55PwkrZfgiShwycHLM+5Ko/QfsDBUsWGN61YkvsAiYe2BrlLk5EFaatNmGRoHbVmf11AIhR1QzvR0/JtvVRSEGFzv5Bw00U4SADAzet4Tg5hzQRuFcICT3qMpgnFzMdA/XCQThIGKSfIOCw7PGGz4zd9zBaWbYsmGH+hh3zQD85cbvO5b/IIZsX8MPCLouhxM7HbVuvJSLTS0NagrDN0L1luvhiqVlqtDrfBrMhETPxeL76W4tdF1LH4BU/ljVUQ2uEiDWWmd1ilcJOSg59GQQ9KTfeSHhPTKVDC9mVyLUVaUPPlDfpSekN/Xp4Kx1atYiyvVOEXMUK7r3QLh30P7U7CpzdZettFIv9Gf7sDcDqCSbkS5Tyk49ixGa9+RQofbCZj3KoRNuwbebGNpi2jGyKC68X1XWymPNMz1ks3Zjw6gaJu0k9qSuNHZmBkrJIr5xUJG04Li1xP2C1BeoY5IPHAwSkzU4v3zk/qWdVJwob16N1bmO+EbKdpu+t6NpcvGa9S6+aNPvHscfPFhO4bsxrPvdjy+WijsPzscfzp2YokVs6oO3b1M126ycWoi5l38+5Mta3hqr256boTcESN7mKgMj3X/s3nFQi9Yi8tK+swwnbizZyUDbObWO7N8x0x/UsqxHmfdteOXyfC49eJ8Ph1Ijx+nQiPXyfC49dvgvBu3wXRpreC8P2HfZdEk96dCcKz830XRZPehoRn/913WbTo/CwiPDt/fQ31w92ZTHj2/u6XV6U///jrLE74enUiPH79D0X2AsxMscuXAAAAAElFTkSuQmCC"
+                alt="">
+            <a href="#"> <span>others</span></a>
+            <span>Banglore</span>
+            <span>Karnataka</span>
+            <span>India</span>
+            <span>
+                <i class="fa fa-angle-down" style="font-size:24px"></i>
+            </span>
+        </div>
+        <i class="fa fa-bars menu"></i>
+
+        <div class="right-navbar">
+            <div class="search">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                    <span>search</span>
+
+                </a>
+            </div>
+            <div class="offer">
+                <a href="#">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>Offer</span>
+
+                </a>
+            </div>
+            <div class="info">
+                <a href="#">
+
+                    <i class="fa fa-info-circle"></i>
+                    <span>Help</span>
+                </a>
+            </div>
+            <div class="signin">
+                <a href="#">
+
+                    <i class="fa fa-sign-in"></i>
+                    <span>Sign In</span>
+                </a>
+            </div>
+            <div class="cart">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Cart</span>
+
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="middle">
+
+
+
+        <div class="container-below-nav">
+
+            <h3>1473 restaurants</h3>
+            <span>Sort By:
+                <i class="fa fa-sort"></i>
+
+            </span>
+            <div class="right-portion">
+                <a href="">
+
+                    <span>Relevance</span>
+                </a>
+                <a href="">
+
+                    <span>Delivery</span>
+                </a>
+                <a href="">
+
+                    <span>Rating</span>
+                </a>
+                <a href="">
+
+                    <span>Cost:Low To High</span>
+                </a>
+                <a href="">
+
+                    <span>Cost:High To Low</span>
+                </a>
+
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="cards-container">
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+            <div class="cards">
+                <div class="promoted">PROMOTED</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxAJcSQRs2u2vkyS5GoKLm66Op0CqWt0rjg&usqp=CAU"
+                    alt="">
+
+                <h3>Burger</h3>
+                <p>1 sliced onion
+                    4 slices cheese slices
+                    1 teaspoon powdered garam
+
+                </p>
+                <div class="rating">
+                    <div class="star">
+                        <span class="fa fa-star checked">4.5</span>
+                    </div>
+                    <i class="fa fa-circle"></i>
+                    <span class="time">44 MINS</span>
+                    <div class="offer">
+
+                        <i class="fa fa-circle"></i>
+                        <span>
+                            <i class="fa fa-rupee">200 FOR TWO</i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p class="discount">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>50% off</span>
+                    | Use WELCOME50
+                </p>
+                <hr>
+
+                <a href="#" class="quickbtn">
+                    <button>QUICK VIEW</button>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="grid-item">
+            <h4>COMPANY</h4>
+            <ul>
+
+                <li>
+                    <a href="#">About us</a>
+
+                </li>
+                <li>
+
+                    <a href="#">Team</a>
+                </li>
+                <li>
+
+                    <a href="#">Career</a>
+                </li>
+                <li>
+
+                    <a href="#">Swiggy Blog</a>
+                </li>
+                <li>
+
+                    <a href="#">Blug Baunty</a>
+                </li>
+                <li>
+
+                    <a href="#">Swiggy Super</a>
+                </li>
+                <li>
+
+                    <a href="#">Swiggy Corporate</a>
+                </li>
+                <li>
+
+                    <a href="#">Swiggy Instamart</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid-item">
+
+            <h4>CONTACT</h4>
+            <ul>
+
+                <li>
+
+                    <a href="#">Help & Support</a>
+                </li>
+                <li>
+
+                    <a href="#">Partner with us</a>
+                </li>
+                <li><a href="#">Ride with us</a></li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <h4>LEGAL</h4>
+            <ul>
+                <li>
+                    <a href="#">Terms and Conditions</a>
+                </li>
+                <li>
+                    <a href="#">Refund & Cancellation</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#">Cookie Policy</a>
+                </li>
+                <li>
+
+                    <a href="#">Offer Terms</a>
+                </li>
+                <li>
+
+                    <a href="#">Phishing & Fraud</a>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-item store-play">
+
+
+            <a href=""><img src=".\downloadGoogle (1).2.png" alt=""></a>
+
+            <a href=""><img src=".\downloadapple (1).1.png" alt=""></a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
